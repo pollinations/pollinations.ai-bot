@@ -9,7 +9,7 @@ import time
 import sys
 from constants import *
 from api import *
-from utils import client, get_prompts_counts
+from utils import get_prompts_counts
 
 
 load_dotenv()
