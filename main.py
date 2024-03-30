@@ -49,8 +49,6 @@ commands_ = {
 class pollinationsBot(commands.Bot):
     def __init__(self):
         intents = discord.Intents.default()
-        intents.messages = True
-        intents.message_content = True
 
         super().__init__(
             command_prefix="!", intents=intents, help_command=None
@@ -267,9 +265,8 @@ async def about(ctx):
 
     embed.set_footer(
         text="Information requested by: {}".format(ctx.author.name),
-        icon_url=ctx.author.avatar.url,
+        icon_url=ctx.author.avatar.url if ctx.author.avatar else None,
     )
-
     await ctx.send(embed=embed)
 
 
