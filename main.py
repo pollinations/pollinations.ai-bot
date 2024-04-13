@@ -18,7 +18,7 @@ start_time = None
 latencies = []
 
 commands_ = {
-    "</pollinate:1123582901544558612> 🎨": """Generates AI Images based on your prompts
+    "</pollinate:1223762317359976519> 🎨": """Generates AI Images based on your prompts
 - **prompt** 🗣️ : Your prompt for the Image to be generated
 - **model** 🤖 : The model to be used for generating the Image
 - **width** ↔️ : The width of your prompted Image
@@ -104,7 +104,6 @@ async def on_message(message):
             await message.reply(embed=embed)
 
     await bot.process_commands(message)
-
 
 @bot.command()
 @commands.is_owner()
